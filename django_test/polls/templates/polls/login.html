@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/btn3d.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animBtn.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'js/lined_thin_btn.js' %}">
+
+
+</head>
+<body>
+ <form class="box"  method="POST" action="">
+     {% csrf_token %}
+  <h1>Login</h1>
+      <input type="text" name="username" placeholder="username"/>
+
+      <input type="password" name="password" placeholder="password"/>
+
+
+ <div class="outer">
+  <div class="text">
+    <button class="button text">Go</button>
+  </div>
+</div>
+
+</form>
+
+</body>
+</html>

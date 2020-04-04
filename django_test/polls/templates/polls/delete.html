@@ -1,0 +1,23 @@
+{% extends 'polls/main.html' %}
+{% load static %}
+{% block content %}
+
+ <div class="row">
+   <div class="col md-6">
+    <div class="card card-body bg-dark text-light align-item-md-center">
+
+   <p>Are You Sure you wanna delete {{item}}</p>
+
+      <form action="{% url 'deleteOrder' item.id %}" method="POST">
+           {% csrf_token %}
+
+    <a class ="btn btn-sm btn-info" href="{% url 'home' %}">Cancel It!</a>
+    <input type="submit" class ="btn btn-sm btn-danger"
+    value="Remove"/>
+</form>
+
+     </div>
+   </div>
+ </div>
+
+{% endblock %}

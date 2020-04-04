@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/btn3d.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animBtn.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'js/lined_thin_btn.js' %}">
+
+
+</head>
+<body>
+ <form class="box"  method="POST">
+   {% csrf_token %}
+  <h1>Login</h1>
+  <div class="fields">
+    {{form.username}}
+  </div>
+  <div class="fields">{{form.email}}</div>
+  <div class="fields">{{form.password1}}</div>
+  <div class="fields">{{form.password2}}</div>
+   {% for i in form %}
+    <h5 class="error">{{i.errors}}</h5>
+   {% endfor %}
+
+   {% for i in form%}
+    <h5 class="error">{{i.messages}}</h5>
+   {% endfor %}
+
+ <div class="outer">
+  <div class="text">
+    <button class="button text">Go</button>
+  </div>
+</div>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+.outer {
+  margin: 50px;
+}
+
+.button {
+  border: 1px solid #3498db;
+  border-radius: 25px;
+  width: 200px;
+  height: 40px;
+  display: block;
+
+  background: linear-gradient(30deg, #2ecc71 40%, #191919 50%);
+  background-size: 300% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+
+.button:hover {
+  background-position: left bottom;
+}
+
+.text {
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  color: #fff;
+  transition: all .6s ease-out;
+  display: block;
+}
+
+.text:hover {
+  color: #000;
+}

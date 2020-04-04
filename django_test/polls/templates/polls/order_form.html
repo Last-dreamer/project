@@ -1,0 +1,19 @@
+{% extends 'polls/main.html' %}
+{% load static %}
+{% block content %}
+
+<form method="POST" action="">
+    {% csrf_token %}
+
+    {{ formSet.management_form }}
+    {% for form in formSet %}
+        {{form}}
+        <hr/>
+
+
+{% endfor %}
+    <input type="submit"/>
+
+
+</form>
+{% endblock %}

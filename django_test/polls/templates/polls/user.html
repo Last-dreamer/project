@@ -1,0 +1,29 @@
+{% extends 'polls/main.html' %}
+{% block content %}
+{% include 'polls/status.html'%}
+
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table  table-sm table-hover ">
+				<tr class="thead-dark">
+					<th>Product</th>
+					<th>Category</th>
+					<th>Date Ordered</th>
+					<th>Status</th>
+				</tr>
+				{% for i in order %}
+				<tr>
+				<td>{{i.product}}</td>
+				<td>{{i.product.category}}</td>
+				<td>{{i.date_created}}</td>
+				<td>{{i.status}}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
